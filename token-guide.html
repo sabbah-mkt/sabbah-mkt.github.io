@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>وفّر توكنز Claude: حوّل ملفاتك قبل ما ترفعها | sabbah.mkt</title>
+<meta name="description" content="دليل عملي: ليش الـ PDF بياكل توكنز على Claude، وكيف تحوّله لنص خفيف بأداة Microsoft المجانية MarkItDown، مع قياس حقيقي وخطوات كاملة.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="logo" href="index.html">sabbah<b></b><i>mkt</i></a>
+<nav><a href="index.html#work">الشغل</a><a href="free.html">ملفات مجانية</a><a href="index.html#contact">تواصل</a></nav></header>
+
+<section class="hero">
+<span class="tag">AI, BUT USEFUL · EP.06</span>
+<h1>وفّر <em>توكنز <bdi dir="ltr">Claude</bdi></em>: حوّل ملفاتك قبل ما ترفعها</h1>
+<p class="lead">ملف PDF من 20 صفحة ممكن يوصل لتقدير رسمي بين 30 و60 ألف توكن، للنص وحده. بأداة مجانية من مايكروسوفت نزل نفس الملف لحوالي 10 آلاف. هون الخطوات والقياس والحدود، بدون مبالغة.</p>
+<a class="btn hi noprint" href="token-guide.pdf">نزّل الدليل PDF</a><a class="btn alt noprint" href="#steps">ابدأ بالخطوات</a>
+</section>
+
+<h2>1. ليش الملف بياكل توكنز؟</h2>
+<p>التوكن هو الوحدة اللي <bdi dir="ltr">Claude</bdi> بيعدّ فيها اللي بيقراه وبيكتبه. لما ترفع <bdi dir="ltr">PDF</bdi>، <bdi dir="ltr">Claude</bdi> ما بياخد النص بس: كل صفحة بتتحوّل لنص <b>ولصورة كمان</b>، وبيتحسب عليك الاتنين. وثائق Anthropic الرسمية بتقول:</p>
+<figure class="shot"><img src="assets/docs.png" alt="وثائق Anthropic: Estimate your costs"><figcaption>المصدر: Claude Platform Docs ← PDF support ← Estimate your costs.</figcaption></figure>
+<div class="kpi"><div class="card"><span class="num">1,500–3,000</span><small>توكن للنص في الصفحة الوحدة (رسمي)</small></div><div class="card"><span class="num">+ صورة</span><small>لكل صفحة، وتكلفتها بتنحسب فوق النص</small></div></div>
+<div class="note">يعني ملف 20 صفحة: من 30,000 إلى 60,000 توكن للنص وحده (20 × 1,500 إلى 20 × 3,000)، وبعدها تكلفة الصور. هاد تقدير رسمي، والرقم الفعلي بيختلف حسب الملف.</div>
+
+<h2>2. الحل: <bdi dir="ltr">MarkItDown</bdi> من مايكروسوفت</h2>
+<p>أداة مجانية ومفتوحة المصدر (رخصة MIT)، بتحوّل الملفات لنص Markdown: نص عادي نظيف مع الحفاظ على العناوين والقوائم والجداول. بتدعم PDF وWord وPowerPoint وExcel وغيرها. وصف مشروعها الرسمي بيقول إنه Markdown «token-efficient».</p>
+<figure class="shot"><img src="assets/github.png" alt="صفحة microsoft/markitdown على GitHub"><figcaption>المصدر: github.com/microsoft/markitdown (حوالي 191.8 ألف نجمة وقت التصوير).</figcaption></figure>
+
+<h2 id="steps">3. التثبيت والاستعمال</h2>
+<ol class="steps">
+<li>لازم يكون عندك <b>Python</b> نسخة 3.10 أو أحدث (حتى 3.14 حسب README الرسمي).</li>
+<li>افتح الـ Terminal وثبّت الأداة بأمر واحد:<pre>pip install 'markitdown[all]'</pre></li>
+<li>حوّل الملف:<pre>markitdown path-to-file.pdf -o document.md</pre></li>
+<li><b>ارفع ملف الـ .md على Claude بدل الـ PDF الأصلي.</b></li>
+</ol>
+<figure class="shot"><img src="assets/gh_usage.png" alt="README الرسمي: Command-Line"><figcaption>المصدر: README الرسمي، قسم Command-Line.</figcaption></figure>
+<p>إذا بدك تثبّت صيغ محددة بس: <code class="i">pip install 'markitdown[pdf, docx, pptx]'</code></p>
+
+<h2>4. القياس الحقيقي</h2>
+<p>جرّبناها على أول 20 صفحة من ملف حكومي مجاني (NIST AI 100-1، إطار إدارة مخاطر الذكاء الاصطناعي):</p>
+<table>
+<tr><th>البند</th><th class="l">القيمة</th></tr>
+<tr><td>حجم ملف الـ PDF (20 صفحة)</td><td class="l">1,766,051 bytes</td></tr>
+<tr><td>حجم ملف الـ Markdown الناتج</td><td class="l">43,387 bytes</td></tr>
+<tr><td>عدد الكلمات</td><td class="l">4,484</td></tr>
+<tr><td>التوكنز بعد التحويل (قياس تقريبي)</td><td class="l">≈ 9,665</td></tr>
+<tr><td>التقدير الرسمي للنص وحده (20 صفحة)</td><td class="l">30,000 – 60,000</td></tr>
+<tr><td>مدة التحويل</td><td class="l">≈ 2.5 s</td></tr>
+</table>
+<div class="note warn"><b>انتبه للرقم:</b> قسنا التوكنز بـ <bdi dir="ltr">tokenizer</bdi> عام (<bdi dir="ltr">cl100k_base</bdi>)، مش <bdi dir="ltr">tokenizer</bdi> تبع <bdi dir="ltr">Claude</bdi>، فالرقم تقريبي و<bdi dir="ltr">Claude</bdi> ممكن يعدّ أعلى شوي. والمقارنة بين تقدير رسمي وقياس تقريبي، مش بين قياسين متطابقين.</div>
+<div class="grid">
+<figure class="shot"><img src="assets/pdf-page.png" alt="صفحة PDF حقيقية"><figcaption>صفحة PDF الأصلية (من الملف).</figcaption></figure>
+<div class="card"><h3>نصها بعد التحويل</h3><pre style="direction:ltr">NIST AI 100-1
+
+1.2.2 Risk Tolerance
+
+While the AI RMF can be used to prioritize
+risk, it does not prescribe risk tolerance.
+Risk tolerance refers to the organization's
+or AI actor's readiness to bear the risk...</pre><small>جزء حقيقي من مخرج الأداة لنفس الصفحة (الصفحة 582 توكن تقريباً).</small></div>
+</div>
+
+<h2>5. مهارة جاهزة لـ <bdi dir="ltr">Claude</bdi></h2>
+<p>في مهارة (Skill) جاهزة على GitHub بتشغّل MarkItDown. هاي مهارة مجتمعية من Eleanor (@intellectronica) بتشتغل في Claude وفي Claude Code، وهي مش من Anthropic ولا من Microsoft.</p>
+<figure class="shot"><img src="assets/gist.png" alt="Markdown Converter Skill على GitHub Gist"><figcaption>المصدر: GitHub Gist «Markdown Converter Skill» (ملف markdown-converter.skill، زر Raw للتنزيل).</figcaption></figure>
+<h3>كيف تضيفها لـ Claude (من لوحة Claude نفسها)</h3>
+<ol class="steps">
+<li>نزّل ملف المهارة من GitHub.</li>
+<li>افتح <b>Customize</b> من القائمة الجانبية.</li>
+<li>افتح تبويب <b>Skills</b>.</li>
+<li>اضغط <b>Add skill</b>.</li>
+<li>اختر <b>Upload skill</b> وارفع الملف.</li>
+</ol>
+<div class="grid">
+<figure class="shot"><img src="assets/cl_side.png" alt="Customize"><figcaption>1. Customize</figcaption></figure>
+<figure class="shot"><img src="assets/cl_skills.png" alt="Skills"><figcaption>2. Skills ← Add skill</figcaption></figure>
+<figure class="shot"><img src="assets/cl_menu.png" alt="Upload skill"><figcaption>3. Upload skill</figcaption></figure>
+</div>
+<div class="note">المهارة بتشغّل الأداة بأمر <code class="i">uvx markitdown</code>، يعني لازم الأداة (uv) تكون متوفرة. وتنصيب المهارة ما بيثبّت الأداة لحاله. لتوفير حقيقي، حوّل الملف <b>قبل</b> ما يوصل لـ Claude.</div>
+
+<h2>6. الحدود (بصراحة)</h2>
+<ul style="margin:0 24px 16px">
+<li>الصور والرسومات جوا الملف <b>ما بتنتقل</b>. الأداة بتطلّع النص: الرسم البياني في الصفحة بيروح ويبقى اسمه (Caption) بس.</li>
+<li>أحياناً بتطلع كلمتين ببعض بدون مسافة (حوالي 1% من الكلمات بالملف اللي قسناه). راجع النص قبل ما ترفعه.</li>
+<li>مناسبة للتقارير والعقود والنصوص. للتصاميم والإنفوجرافيك، ارفع الملف الأصلي.</li>
+</ul>
+
+<h2>المصادر</h2>
+<p class="src">وثائق Anthropic (تكلفة PDF): <a href="https://platform.claude.com/docs/en/build-with-claude/pdf-support">platform.claude.com/docs/en/build-with-claude/pdf-support</a><br>
+MarkItDown: <a href="https://github.com/microsoft/markitdown">github.com/microsoft/markitdown</a><br>
+المهارة المجتمعية: <a href="https://gist.github.com/AbhimanyuAryan/2bf1336f51cbacfb238c00426857d760">gist.github.com/AbhimanyuAryan/2bf1336f51cbacfb238c00426857d760</a> (نسخة من gist لـ intellectronica)<br>
+الملف التجريبي: <a href="https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf">NIST AI 100-1</a> (منشور حكومي أمريكي مجاني)<br>
+دليل Anthropic لرفع المهارات: <a href="https://support.claude.com/en/articles/12512180-using-skills-in-claude">support.claude.com/en/articles/12512180</a></p>
+
+<h2 class="noprint">بدك أكتر؟</h2>
+<p class="noprint">تابع <a href="https://www.instagram.com/sabbah.mkt/"><bdi dir="ltr">@sabbah.mkt</bdi></a>. كل ريل بيجي مع ملف مجاني.</p>
+<footer>© sabbah.mkt · E-Marketing · Social Media · AI</footer>
+</div>
+</body>
+</html>
