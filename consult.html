@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>طلب استشارة | sabbah.mkt</title>
+<meta name="description" content="اطلب استشارة في التسويق الإلكتروني أو في خدمات الذكاء الاصطناعي: عبّئ النموذج القصير وستصلني تفاصيلك على إنستغرام للتنسيق.">
+<meta property="og:title" content="طلب استشارة | sabbah.mkt">
+<meta property="og:image" content="assets/me.jpg">
+<link rel="stylesheet" href="style.css">
+<style>
+.form{background:#fff;border-radius:26px;padding:26px 28px;box-shadow:0 22px 44px -26px rgba(18,19,22,.35);margin:20px 0}
+.form label{display:block;font-weight:700;font-size:17px;margin:18px 0 6px}
+.form label:first-child{margin-top:0}
+.form input,.form textarea,.form select{width:100%;font-family:inherit;font-size:17px;color:var(--ink);background:var(--bg);border:2px solid var(--line);border-radius:16px;padding:12px 16px;line-height:1.6}
+.form textarea{min-height:120px;resize:vertical}
+.form input:focus,.form textarea:focus,.form select:focus{outline:none;border-color:var(--acc);background:#fff}
+.form .hint{font-size:14px;color:var(--mut);margin:4px 2px 0}
+.grp{font-weight:700;font-size:15px;color:var(--acc);margin:14px 0 2px}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+.chips label{display:inline-flex;align-items:center;gap:8px;margin:0;font-weight:600;font-size:16px;background:var(--bg);border:2px solid var(--line);border-radius:30px;padding:8px 16px;cursor:pointer}
+.chips input{width:auto;margin:0}
+.chips label:has(input:checked){border-color:var(--ink);background:var(--hi)}
+.steps{counter-reset:s;list-style:none;padding:0;margin:14px 0}
+.steps li{counter-increment:s;position:relative;padding:6px 52px 6px 0;margin-bottom:8px}
+.steps li::before{content:counter(s);position:absolute;right:0;top:4px;width:36px;height:36px;border-radius:50%;background:var(--hi);font-family:Inter;font-weight:800;display:flex;align-items:center;justify-content:center}
+#status{margin-top:14px;font-weight:600}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="logo" href="index.html">sabbah<b></b><i>mkt</i></a>
+<nav><a href="index.html#services">الخدمات</a><a href="free.html">ملفات مجانية</a><a href="index.html#contact">التواصل</a></nav></header>
+
+<section class="hero">
+<span class="tag">CONSULTATION</span>
+<h1>اطلب <mark>استشارة</mark> فردية</h1>
+<p class="lead">أقدّم خدماتي في مجالين منفصلين: <b>التسويق الإلكتروني</b> و<b>الذكاء الاصطناعي</b>. اختر ما يناسب حالتك من أيٍّ منهما، عبّئ النموذج القصير، ثم أرسله إليّ عبر إنستغرام لنتفق على الموعد والتفاصيل.</p>
+</section>
+
+<h2>كيف تتم الخطوات؟</h2>
+<ol class="steps">
+<li>تعبئة النموذج أدناه (دقيقتان).</li>
+<li>الضغط على زر «أرسل الطلب عبر إنستغرام»: ينسخ الموقع طلبك تلقائياً ويفتح محادثتي على إنستغرام.</li>
+<li>لصق الرسالة وإرسالها، ثم أردّ عليك بالموعد وطريقة الدفع.</li>
+</ol>
+
+<form class="form" id="f" onsubmit="return false">
+<label for="name">الاسم</label>
+<input id="name" autocomplete="name" placeholder="اسمك الكريم" required>
+
+<label for="biz">ما مجال عملك أو حسابك؟</label>
+<input id="biz" placeholder="مثال: متجر ملابس، صانع محتوى، عيادة، مطعم…">
+
+<label>ما الذي تحتاجه؟ (اختر ما ينطبق، من أيٍّ من المجالين)</label>
+<div class="grp">التسويق الإلكتروني</div>
+<div class="chips" id="needsM">
+<label><input type="checkbox" value="استراتيجية تسويق"> استراتيجية تسويق</label>
+<label><input type="checkbox" value="حملات إعلانية"> حملات إعلانية</label>
+<label><input type="checkbox" value="إدارة سوشال ميديا"> إدارة سوشال ميديا</label>
+<label><input type="checkbox" value="إنتاج محتوى"> إنتاج محتوى</label>
+<label><input type="checkbox" value="تحليل وتحسين حساب"> تحليل وتحسين حساب</label>
+</div>
+<div class="grp">الذكاء الاصطناعي</div>
+<div class="chips" id="needsA">
+<label><input type="checkbox" value="توليد صور بالذكاء الاصطناعي"> توليد صور</label>
+<label><input type="checkbox" value="توليد فيديو بالذكاء الاصطناعي"> توليد فيديو</label>
+<label><input type="checkbox" value="أتمتة الرسائل والعمليات"> أتمتة الرسائل والعمليات</label>
+<label><input type="checkbox" value="أدوات الذكاء الاصطناعي لعملي"> اختيار أدوات AI لعملي</label>
+<label><input type="checkbox" value="تدريب على الذكاء الاصطناعي"> تدريب على الذكاء الاصطناعي</label>
+</div>
+<div class="grp">أخرى</div>
+<div class="chips" id="needsO">
+<label><input type="checkbox" value="لا أعرف بعد، أحتاج توجيهاً"> لا أعرف بعد، أحتاج توجيهاً</label>
+</div>
+
+<label for="goal">ما الهدف الذي تريد الوصول إليه؟</label>
+<textarea id="goal" placeholder="اكتب بإيجاز الوضع الحالي وما تريد تحقيقه."></textarea>
+
+<label for="link">رابط حسابك أو موقعك (اختياري)</label>
+<input id="link" dir="ltr" placeholder="instagram.com/username" style="text-align:left">
+
+<label for="when">الوقت المناسب لك</label>
+<select id="when">
+<option value="">اختر</option>
+<option>صباحاً</option>
+<option>بعد الظهر</option>
+<option>مساءً</option>
+<option>أي وقت</option>
+</select>
+
+<p class="hint">لا يُطلب منك رقم هاتف. يتم التواصل بالكامل عبر رسائل إنستغرام.</p>
+<a class="btn hi" href="#" id="send">أرسل الطلب عبر إنستغرام</a>
+<a class="btn alt" href="#" id="copy">نسخ النص فقط</a>
+<div id="status" role="status"></div>
+</form>
+
+<div class="note"><b>ملاحظة:</b> الاستشارة مدفوعة. أرسل لك السعر والتفاصيل وطريقة الدفع بعد الاتفاق على الموعد.</div>
+
+<div class="cta-box">
+<h3>تريد البدء بشيء مجاني؟</h3>
+<p>حمّل أحد الملفات المجانية وتعرّف على أسلوب عملي قبل أن تحجز.</p>
+<a class="btn" href="free.html">الملفات المجانية</a><a class="btn alt" href="https://www.instagram.com/sabbah.mkt/">تابع @sabbah.mkt</a>
+</div>
+
+<footer>© 2026 sabbah.mkt</footer>
+</div>
+<script>
+(function(){
+  var $=function(i){return document.getElementById(i)};
+  function build(){
+    function pick(id){return [].slice.call(document.querySelectorAll('#'+id+' input:checked')).map(function(x){return x.value}).join('، ')}
+    var m=pick('needsM'),a=pick('needsA'),o=pick('needsO');
+    var L=['طلب استشارة من موقع sabbah.mkt','',
+      'الاسم: '+($('name').value.trim()||'—'),
+      'المجال: '+($('biz').value.trim()||'—'),
+      'تسويق إلكتروني: '+(m||'—'),
+      'ذكاء اصطناعي: '+(a||'—'),
+      (o?'ملاحظة: '+o:''),
+      'الهدف: '+($('goal').value.trim()||'—')];
+    if($('link').value.trim())L.push('الرابط: '+$('link').value.trim());
+    if($('when').value)L.push('الوقت المناسب: '+$('when').value);
+    return L.filter(function(x,i){return x!==''||i===1}).join('\n');
+  }
+  function valid(){
+    if(!$('name').value.trim()){$('status').textContent='يرجى كتابة اسمك أولاً.';$('name').focus();return false}
+    if(!$('goal').value.trim()){$('status').textContent='يرجى كتابة هدفك باختصار.';$('goal').focus();return false}
+    return true;
+  }
+  function copy(t){
+    if(navigator.clipboard&&navigator.clipboard.writeText)return navigator.clipboard.writeText(t);
+    return new Promise(function(res,rej){try{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();document.execCommand('copy');document.body.removeChild(a);res()}catch(e){rej(e)}});
+  }
+  $('copy').onclick=function(e){e.preventDefault();if(!valid())return;
+    copy(build()).then(function(){$('status').textContent='تم نسخ الطلب. الصقه في محادثتي على إنستغرام: @sabbah.mkt'}).catch(function(){$('status').textContent='تعذّر النسخ تلقائياً. حدّد النص يدوياً.'})};
+  $('send').onclick=function(e){e.preventDefault();if(!valid())return;
+    copy(build()).then(function(){
+      $('status').textContent='تم نسخ الطلب. افتح المحادثة والصقه (لصق) ثم أرسله.';
+      window.open('https://ig.me/m/sabbah.mkt','_blank','noopener');
+    }).catch(function(){window.open('https://ig.me/m/sabbah.mkt','_blank','noopener');$('status').textContent='افتح المحادثة واكتب طلبك فيها.'})};
+})();
+</script>
+</body>
+</html>
