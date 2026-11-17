@@ -1,0 +1,10 @@
+[
+  {
+    "name": "my-first-campaign",
+    "regex": "mon\w{0,3}ag|montaj|mont[a-z]{2,5}",
+    "caption_match": ["montage"],
+    "media_ids": ["PUT_YOUR_REEL_MEDIA_ID_HERE"],
+    "msg": "Hi! Here is the link you asked for:\nhttps://your-site.com/your-page/\nFollow me for more!",
+    "replies": ["Sent you a DM!", "Check your DMs", "Done! Check your DMs"]
+  }
+]

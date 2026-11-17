@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://sabbah-mkt.github.io/claude-dms/">
+<title>أرسل رسائل الكومنتات بدون اشتراك | sabbah.mkt</title>
+<meta name="description" content="دليل مجاني: كيف ترسل رسائل خاصة لمن يكتب كلمة معيّنة تحت مقطعك عبر Claude أو عبر سكربت على جهازك، دون اشتراك أداة أتمتة. مع تحميل السكربت.">
+<meta property="og:title" content="أرسل رسائل الكومنتات بدون اشتراك">
+<meta property="og:image" content="/assets/dm-p1.jpg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="logo" href="/">sabbah<b></b><i>mkt</i></a>
+<nav><a href="/#services">الخدمات</a><a href="/free/">ملفات مجانية</a><a href="/consult/">استشارة</a><a href="/#contact">التواصل</a></nav></header>
+
+<section class="hero">
+<span class="tag">FREE FILE 05</span>
+<h1>أرسل رسائل الكومنتات <mark>بدون اشتراك</mark>… عبر <bdi dir="ltr">Claude</bdi></h1>
+<p class="lead">عندما يكتب المتابع كلمة معيّنة تحت مقطعك تصله رسالة خاصة فيها الرابط. الأدوات الجاهزة لها حصص مجانية محدودة، وعندما تنتهي تتوقف الأتمتة. هنا طريقتان لإرسال الرسائل عبر الواجهة الرسمية لإنستغرام دون اشتراك.</p>
+<a class="btn hi" href="/files/claude-dm-guide.pdf" download>تحميل الدليل (PDF)</a><a class="btn alt" href="#script">تحميل السكربت</a>
+</section>
+
+<h2>القواعد الرسمية قبل أن تبدأ</h2>
+<div class="grid">
+<div class="card"><h3>7 أيام لكل كومنت</h3><p>يمكن الرد على الكومنت برسالة خاصة خلال 7 أيام فقط من كتابته، ورسالة واحدة لكل كومنت.</p><a class="btn" href="https://developers.facebook.com/docs/messenger-platform/instagram/features/private-replies/" target="_blank" rel="noopener">توثيق Meta الرسمي</a></div>
+<div class="card"><h3>حساب احترافي</h3><p>Business أو Creator. الحساب الشخصي لا يدعم هذه الواجهة، والتحويل مجاني.</p><a class="btn" href="https://help.instagram.com/502981923235522" target="_blank" rel="noopener">تحويل الحساب</a></div>
+<div class="card"><h3>حدّ ساعي</h3><p>تذكر المصادر نحو 750 رداً خاصاً في الساعة لكل حساب، فأضف فاصلاً بين الرسائل ولا تكرّر الإرسال.</p></div>
+</div>
+<div class="note"><b>تنبيه:</b> أنت المسؤول عن الالتزام بسياسات إنستغرام. أرسل فقط لمن كتب الكلمة بنفسه.</div>
+
+<h2>الطريقة الأولى: عبر <bdi dir="ltr">Claude</bdi> مباشرة</h2>
+<ol class="steps">
+<li><b>أضف <bdi dir="ltr">Composio</bdi> إلى <bdi dir="ltr">Claude</bdi>.</b> من <bdi dir="ltr">Connectors ← Add custom connector</bdi> وسمِّه <bdi dir="ltr">Composio</bdi> والصق الرابط:
+<pre>https://connect.composio.dev/mcp</pre><a class="btn" href="https://docs.composio.dev/docs/composio-connect" target="_blank" rel="noopener">دليل Composio الرسمي</a><a class="btn alt" href="https://composio.dev/pricing.md" target="_blank" rel="noopener">الأسعار (خطة مجانية)</a></li>
+<li><b>اربط حساب إنستغرام.</b> اطلب من <bdi dir="ltr">Claude</bdi>: «اربط حساب إنستغرام» ثم وافق من الرابط الذي يعطيك إياه.</li>
+<li><b>اطلب الإرسال.</b> اطلب أولاً قائمة بمن سيستلم دون إرسال، راجعها، ثم قل له أرسل:
+<pre>Find everyone who commented "montage" on my latest reel and has no DM thread with me. Send each a private reply with this link: https://your-site.com. Wait 3 seconds between messages. Never message the same person twice.</pre></li>
+</ol>
+<div class="note"><b>ملاحظة:</b> هذه الطريقة تستهلك من حدود استخدام <bdi dir="ltr">Claude</bdi> في كل مرة. للأتمتة المتكرّرة استخدم الطريقة الثانية.</div>
+
+<h2 id="script">الطريقة الثانية: سكربت على جهازك بدون <bdi dir="ltr">Claude</bdi></h2>
+<p>يتصل السكربت بإنستغرام عبر <bdi dir="ltr">Composio</bdi> مباشرة فلا يستهلك من حدود <bdi dir="ltr">Claude</bdi>، ويعمل كل ساعة. وهو مكتوب بلغة <bdi dir="ltr">Python</bdi> دون مكتبات إضافية، ويمكنك قراءته قبل التشغيل.</p>
+<div class="grid">
+<div class="card"><h3>dm_sweep_local.py</h3><p>السكربت الرئيسي.</p><a class="btn hi" href="/files/dm-sweep/dm_sweep_local.py" download>تحميل</a></div>
+<div class="card"><h3>dm_campaigns.example.json</h3><p>نموذج الحملة: الكلمة، والمقطع، والرسالة.</p><a class="btn hi" href="/files/dm-sweep/dm_campaigns.example.json" download>تحميل</a></div>
+<div class="card"><h3>.env.example</h3><p>نموذج المفتاح واسم الحساب.</p><a class="btn hi" href="/files/dm-sweep/.env.example" download>تحميل</a></div>
+</div>
+<ol class="steps">
+<li><b>المفتاح.</b> من لوحة <bdi dir="ltr">Composio</bdi>: <bdi dir="ltr">Settings ← Sessions &amp; API Key</bdi>. أنشئ ملف <code class="i">.env</code> بجانب السكربت وضع فيه المفتاح واسم حسابك. <b>لا تشاركه مع أحد</b>، فهو يفتح كل التطبيقات التي ربطتها.<br><a class="btn" href="https://dashboard.composio.dev" target="_blank" rel="noopener">لوحة Composio</a></li>
+<li><b>الحملة.</b> انسخ <code class="i">dm_campaigns.example.json</code> إلى <code class="i">dm_campaigns.json</code> وغيّر الكلمة ورقم المقطع ونص الرسالة والرابط.</li>
+<li><b>جرّب بدون إرسال.</b>
+<pre>python dm_sweep_local.py --check
+python dm_sweep_local.py --dry</pre>الأول يفحص الاتصال، والثاني يعرض من سيستلم الرسالة دون إرسال. راجع القائمة جيداً.<br><a class="btn" href="https://www.python.org/downloads/" target="_blank" rel="noopener">تحميل Python</a></li>
+<li><b>شغّله فعلياً.</b>
+<pre>python dm_sweep_local.py</pre></li>
+<li><b>جدوِله كل ساعة.</b> على ويندوز (غيّر المسارين):
+<pre>schtasks /Create /SC HOURLY /TN "ig-dm-sweep" /TR "\"C:\Path\to\pythonw.exe\" \"C:\Path\to\dm_sweep_local.py\"" /F</pre>
+وعلى ماك أو لينكس ضع هذا السطر في <bdi dir="ltr">crontab -e</bdi>:
+<pre>0 * * * * /usr/bin/python3 /path/to/dm_sweep_local.py</pre>
+<a class="btn" href="https://learn.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page" target="_blank" rel="noopener">شرح Task Scheduler</a></li>
+</ol>
+<div class="note"><b>أداة جاهزة بدل السكربت؟</b> <bdi dir="ltr">InstantDM</bdi> و<bdi dir="ltr">LinkDM</bdi> لهما خطط مجانية محدودة، و<a href="https://github.com/diwenne/openreply" target="_blank" rel="noopener"><bdi dir="ltr">OpenReply</bdi></a> مفتوحة المصدر لكنها تحتاج استضافة خاصة.</div>
+<p class="src">جرى التحقق من جميع الروابط بتاريخ 17 تشرين الثاني 2026، وقد تتغيّر الأسعار والميزات.</p>
+
+<a class="btn hi" href="/files/claude-dm-guide.pdf" download>تحميل الدليل (PDF)</a>
+
+<div class="cta-box">
+<h3>هل تريد المزيد من هذه الأدوات؟</h3>
+<p>أنشر أداة أو فكرة عملية جديدة باستمرار، ومعها ملف مجاني بالروابط. تابعني على إنستغرام ليصلك كل جديد.</p>
+<a class="btn" href="https://www.instagram.com/sabbah.mkt/">تابع <bdi dir="ltr">@sabbah.mkt</bdi></a><a class="btn alt" href="/free/">بقية الملفات</a>
+</div>
+
+<footer>© 2026 sabbah.mkt</footer>
+</div>
+</body>
+</html>
