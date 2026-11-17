@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<link rel="canonical" href="https://sabbah-mkt.github.io/openmontage/">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>حوّل Claude إلى استوديو إنتاج كامل | sabbah.mkt</title>
+<meta name="description" content="دليل مجاني لأداة OpenMontage مفتوحة المصدر: ماذا تفعل، وما تحتاجه، وكيف تثبّتها وتشغّلها داخل Claude Code، مع رابط رسمي لكل خطوة.">
+<meta property="og:title" content="حوّل Claude إلى استوديو إنتاج كامل">
+<meta property="og:image" content="/assets/om-backlot.jpg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="logo" href="/">sabbah<b></b><i>mkt</i></a>
+<nav><a href="/#services">الخدمات</a><a href="/free/">ملفات مجانية</a><a href="/#contact">التواصل</a></nav></header>
+
+<section class="hero">
+<span class="tag">FREE FILE 04</span>
+<h1>حوّل <bdi dir="ltr">Claude</bdi> إلى <mark>استوديو إنتاج</mark> كامل</h1>
+<p class="lead"><bdi dir="ltr">OpenMontage</bdi> أداة مجانية مفتوحة المصدر على <bdi dir="ltr">GitHub</bdi>. تفتحها داخل <bdi dir="ltr">Claude Code</bdi> وتكتب فكرتك بجملة واحدة، فيعمل الذكاء الاصطناعي كفريق إنتاج: يبحث، ويكتب السكربت، ويجهّز الصور واللقطات والصوت، ثم يركّب فيديو نهائياً. في هذه الصفحة كل خطوة ومعها رابطها الرسمي.</p>
+<a class="btn hi" href="/files/openmontage-guide.pdf" download>تحميل الدليل (PDF)</a><a class="btn alt" href="https://github.com/OpenMontageInc/OpenMontage" target="_blank" rel="noopener">صفحة الأداة على GitHub</a>
+</section>
+
+<figure class="shot"><img src="/assets/om-backlot.jpg" alt="لوحة متابعة الإنتاج في OpenMontage"><figcaption>لوحة المتابعة في الأداة من صفحتها الرسمية: مراحل الإنتاج، والسكربت المعتمد، وسجلّ التوليد، ولوحة المشاهد.</figcaption></figure>
+
+<h2>فريق الإنتاج داخل الأداة</h2>
+<div class="grid">
+<div class="card"><h3>الباحث <bdi dir="ltr">research</bdi></h3><p>يبحث عن موضوعك على الإنترنت ويجمع المصادر قبل الكتابة.</p></div>
+<div class="card"><h3>الكاتب <bdi dir="ltr">script</bdi></h3><p>يكتب السكربت مقسّماً إلى مشاهد، ويعرضه عليك للموافقة.</p></div>
+<div class="card"><h3>المنتج <bdi dir="ltr">scene_plan · assets</bdi></h3><p>يخطّط المشاهد ويولّد الصور أو يجلب لقطات حقيقية (<bdi dir="ltr">B-roll</bdi>) من مصادر مجانية.</p></div>
+<div class="card"><h3>فني الصوت والمونتاج</h3><p>يضيف التعليق الصوتي والموسيقى والترجمة، ثم يُخرج الفيديو النهائي.</p></div>
+</div>
+
+<h2>ماذا تحتاج قبل البدء؟</h2>
+<div class="grid">
+<div class="card"><h3><bdi dir="ltr">Claude Code</bdi></h3><p>المساعد الذي سيشغّل الأداة. تعمل أيضاً مع <bdi dir="ltr">Cursor</bdi> و<bdi dir="ltr">Codex</bdi> و<bdi dir="ltr">Copilot</bdi> و<bdi dir="ltr">Windsurf</bdi>.</p><a class="btn" href="https://code.claude.com/docs/en/overview" target="_blank" rel="noopener">دليل Claude Code الرسمي</a></div>
+<div class="card"><h3><bdi dir="ltr">Python 3.10</bdi> أو أحدث</h3><p>عند التثبيت على ويندوز فعّل خيار <bdi dir="ltr">Add to PATH</bdi>.</p><a class="btn" href="https://www.python.org/downloads/" target="_blank" rel="noopener">تحميل Python</a></div>
+<div class="card"><h3><bdi dir="ltr">Node.js</bdi></h3><p>لمحرّك تركيب الفيديو. نزّل نسخة <bdi dir="ltr">LTS</bdi> الحالية.</p><a class="btn" href="https://nodejs.org/" target="_blank" rel="noopener">تحميل Node.js</a></div>
+<div class="card"><h3><bdi dir="ltr">FFmpeg</bdi> و<bdi dir="ltr">Git</bdi></h3><p><bdi dir="ltr">FFmpeg</bdi> لترميز الفيديو والصوت، و<bdi dir="ltr">Git</bdi> لتنزيل الأداة.</p><a class="btn" href="https://ffmpeg.org/download.html" target="_blank" rel="noopener">تحميل FFmpeg</a><a class="btn alt" href="https://git-scm.com/downloads" target="_blank" rel="noopener">تحميل Git</a></div>
+</div>
+
+<h2>التثبيت في 3 خطوات</h2>
+<ol class="steps">
+<li><b>نزّل الأداة.</b> افتح الطرفية (<bdi dir="ltr">Terminal</bdi>) واكتب:
+<pre>git clone https://github.com/OpenMontageInc/OpenMontage.git
+cd OpenMontage</pre><a class="btn" href="https://github.com/OpenMontageInc/OpenMontage#quick-start" target="_blank" rel="noopener">قسم Quick Start</a></li>
+<li><b>جهّز الأداة.</b> على ماك ولينكس اكتب <code class="i">make setup</code>. وعلى ويندوز لا يوجد <bdi dir="ltr">make</bdi>، فانسخ أمر <bdi dir="ltr">PowerShell</bdi> الجاهز من قسم <bdi dir="ltr">Quick Start</bdi>، وهو يبدأ بـ <code class="i">py -3 -m venv .venv</code>. وإن ظهر خطأ عند <bdi dir="ltr">npm install</bdi> على ويندوز فاستخدم <code class="i">npx --yes npm install</code>.<br><a class="btn" href="https://github.com/OpenMontageInc/OpenMontage#install--run" target="_blank" rel="noopener">أوامر التثبيت الرسمية</a></li>
+<li><b>افتح المجلد في <bdi dir="ltr">Claude Code</bdi> واطلب فيديو.</b> من داخل مجلد <bdi dir="ltr">OpenMontage</bdi> شغّل <code class="i">claude</code> ثم اكتب فكرتك، مثلاً:
+<pre>Make a 45-second animated explainer about why the sky is blue</pre></li>
+</ol>
+<div class="note"><b>بدون أي مفاتيح مدفوعة</b> تعمل الأداة فعلاً: تعليق صوتي مجاني (<bdi dir="ltr">Piper</bdi>)، ولقطات حقيقية مفتوحة من <bdi dir="ltr">Archive.org</bdi> و<bdi dir="ltr">NASA</bdi> و<bdi dir="ltr">Wikimedia Commons</bdi>، ومونتاج بـ <bdi dir="ltr">FFmpeg</bdi>.</div>
+
+<h2>مفاتيح مجانية تزيد جودة اللقطات</h2>
+<p>كل المفاتيح اختيارية. ضعها في ملف <code class="i">.env</code> داخل مجلد الأداة.</p>
+<div class="grid">
+<div class="card"><h3><bdi dir="ltr">Pexels</bdi> (مجاني)</h3><p>لقطات فيديو وصور مجانية. المتغيّر: <code class="i">PEXELS_API_KEY</code></p><a class="btn" href="https://www.pexels.com/api/" target="_blank" rel="noopener">احصل على المفتاح</a></div>
+<div class="card"><h3><bdi dir="ltr">Pixabay</bdi> (مجاني)</h3><p>لقطات وصور وموسيقى مجانية. المتغيّر: <code class="i">PIXABAY_API_KEY</code></p><a class="btn" href="https://pixabay.com/api/docs/" target="_blank" rel="noopener">احصل على المفتاح</a></div>
+<div class="card"><h3><bdi dir="ltr">Unsplash</bdi> (مجاني)</h3><p>صور عالية الجودة. المتغيّر: <code class="i">UNSPLASH_ACCESS_KEY</code></p><a class="btn" href="https://unsplash.com/developers" target="_blank" rel="noopener">احصل على المفتاح</a></div>
+<div class="card"><h3><bdi dir="ltr">ElevenLabs</bdi> (اختياري)</h3><p>صوت أقوى وموسيقى ومؤثرات. المتغيّر: <code class="i">ELEVENLABS_API_KEY</code></p><a class="btn" href="https://elevenlabs.io/" target="_blank" rel="noopener">موقع ElevenLabs</a></div>
+</div>
+<a class="btn alt" href="https://github.com/OpenMontageInc/OpenMontage/blob/main/docs/PROVIDERS.md" target="_blank" rel="noopener">دليل المزوّدين مع الأسعار والخطط المجانية</a>
+
+<h2>ماذا تصنع بها؟</h2>
+<div class="grid">
+<div class="card"><h3>أنيميشن وشرح متحرّك</h3><p>مسارا <bdi dir="ltr">Animated Explainer</bdi> و<bdi dir="ltr">Animation</bdi>: شروحات تعليمية وموشن غرافيك.</p></div>
+<div class="card"><h3>تريلر سينمائي</h3><p>مسار <bdi dir="ltr">Cinematic</bdi>: إعلانات تشويقية وأفلام قصيرة للعلامات التجارية.</p></div>
+<div class="card"><h3>إعلان لمنتجك أو شرح لتطبيقك</h3><p>مسار <bdi dir="ltr">Screen Demo</bdi> لشرح المنتجات الرقمية، أو اطلب إعلاناً تشويقياً لمنتجك مباشرة.</p><a class="btn" href="https://github.com/OpenMontageInc/OpenMontage/blob/main/PROMPT_GALLERY.md" target="_blank" rel="noopener">معرض الأوامر الجاهزة</a></div>
+</div>
+<div class="note"><b>التكلفة بحسب الصفحة الرسمية:</b> المسار المجاني بلا مفاتيح يكلّف صفراً. ومع مزوّد صور أو فيديو مدفوع تقريباً <bdi dir="ltr">$0.15–$1.50</bdi> للمقطع، والإعداد الكامل نحو <bdi dir="ltr">$1–$3</bdi>. الأداة تعرض التكلفة المتوقعة قبل أن تصرف أي شيء. الرخصة: <bdi dir="ltr">AGPL-3.0</bdi>.</div>
+<p class="src">جرى التحقق من جميع الروابط بتاريخ 10 تشرين الثاني 2026، وقد تتغيّر الأسعار والميزات.</p>
+
+<a class="btn hi" href="/files/openmontage-guide.pdf" download>تحميل الدليل (PDF)</a>
+
+<div class="cta-box">
+<h3>هل تريد المزيد من هذه الأدوات؟</h3>
+<p>أنشر أداة أو فكرة عملية جديدة باستمرار، ومعها ملف مجاني بالروابط. تابعني على إنستغرام ليصلك كل جديد.</p>
+<a class="btn" href="https://www.instagram.com/sabbah.mkt/">تابع <bdi dir="ltr">@sabbah.mkt</bdi></a><a class="btn alt" href="/free/">بقية الملفات</a>
+</div>
+
+<footer>© 2026 sabbah.mkt</footer>
+</div>
+</body>
+</html>

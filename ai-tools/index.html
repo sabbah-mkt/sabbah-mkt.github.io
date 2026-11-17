@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<link rel="canonical" href="https://sabbah-mkt.github.io/ai-tools/">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>خريطة أدوات الذكاء الاصطناعي: 24 أداة لست مهام | sabbah.mkt</title>
+<meta name="description" content="خريطة مجانية لأدوات الذكاء الاصطناعي: أربع أدوات لكل مهمة من الأفكار والبحث إلى الصور والفيديو والتصميم والصوت، مع الرابط الرسمي لكل أداة.">
+<meta property="og:title" content="خريطة أدوات الذكاء الاصطناعي">
+<meta property="og:image" content="/assets/tools-p1.jpg">
+<link rel="stylesheet" href="/style.css">
+<style>
+.tgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:14px 0 30px}
+.tcard{background:#fff;border-radius:20px;padding:16px 18px;box-shadow:0 22px 44px -26px rgba(18,19,22,.35);display:flex;flex-direction:column;gap:8px}
+.tcard .hd{display:flex;align-items:center;gap:10px}
+.tcard img{width:40px;height:40px;object-fit:contain}
+.tcard h3{margin:0;font-family:Inter;font-weight:800;font-size:19px;direction:ltr}
+.tcard p{margin:0;font-size:15.5px;flex:1}
+.tcard .btn{align-self:flex-start;font-size:15px;padding:9px 18px;margin:4px 0 0}
+.tmap{background:#fff;border-radius:22px;padding:14px 18px;margin:16px 0;box-shadow:0 22px 44px -26px rgba(18,19,22,.35)}
+.tmap .r{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.tmap .r:last-child{border:0}
+.tmap .lb{width:150px;flex:none;font-weight:700;font-size:16px}
+.tmap .ic{flex:1;text-align:center;font-family:Inter;font-size:11px;font-weight:700;color:#444;direction:ltr}
+.tmap .ic img{width:34px;height:34px;object-fit:contain;display:block;margin:0 auto 3px}
+@media (max-width:640px){.tmap .lb{width:90px;font-size:14px}.tmap .ic img{width:28px;height:28px}.tmap .ic{font-size:9px}}
+</style>
+<script src="/assets/tools/tools.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="logo" href="/">sabbah<b></b><i>mkt</i></a>
+<nav><a href="/#services">الخدمات</a><a href="/free/">ملفات مجانية</a><a href="/#contact">التواصل</a></nav></header>
+
+<section class="hero">
+<span class="tag">FREE FILE 03</span>
+<h1>خريطة أدوات <mark>الذكاء الاصطناعي</mark></h1>
+<p class="lead">ست مهام، ولكل مهمة أربع أدوات. بدلاً من تجربة كل أداة جديدة تظهر، ابدأ بهذه الخريطة: ماذا تفعل كل أداة، ورابطها الرسمي تحتها مباشرة.</p>
+<a class="btn hi" href="/files/ai-tools-map.pdf" download>تحميل الخريطة (PDF)</a>
+</section>
+
+<div class="tmap" id="tmap"></div>
+<div id="cats"></div>
+
+<div class="note"><b>ملاحظة:</b> معظم هذه الأدوات تقدّم استخداماً مجانياً محدوداً وخططاً مدفوعة، والأسعار والميزات تتغيّر باستمرار، لذلك راجع الموقع الرسمي لكل أداة قبل الاشتراك.</div>
+<p class="src">جرى التحقق من جميع الروابط بتاريخ 8 تشرين الثاني 2026.</p>
+<a class="btn hi" href="/files/ai-tools-map.pdf" download>تحميل الخريطة (PDF)</a>
+
+<div class="cta-box">
+<h3>هل تريد المزيد من هذه الأدوات؟</h3>
+<p>أنشر أداة أو فكرة عملية جديدة باستمرار، ومعها ملف مجاني بالروابط. تابعني على إنستغرام ليصلك كل جديد.</p>
+<a class="btn" href="https://www.instagram.com/sabbah.mkt/">تابع <bdi dir="ltr">@sabbah.mkt</bdi></a><a class="btn alt" href="/free/">بقية الملفات</a>
+</div>
+<footer>© 2026 sabbah.mkt</footer>
+</div>
+<script>
+const T = window.TOOLS, host = u => u.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, '');
+document.getElementById('tmap').innerHTML = T.map(c => `<div class="r"><div class="lb">${c.cat}</div>${c.items.map(i => `<div class="ic"><img src="/assets/tools/${i[0]}.png" alt="">${i[1]}</div>`).join('')}</div>`).join('');
+document.getElementById('cats').innerHTML = T.map((c, n) => `<h2>${n + 1}. ${c.cat}</h2><div class="tgrid">` + c.items.map(i => `<div class="tcard"><div class="hd"><img src="/assets/tools/${i[0]}.png" alt="${i[1]}"><h3>${i[1]}</h3></div><p>${i[2]}</p><a class="btn" href="/${i[3]}" target="_blank" rel="noopener">افتح ${i[1]} ←</a></div>`).join('') + `</div>`).join('');
+</script>
+</body>
+</html>
