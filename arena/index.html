@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="canonical" href="https://sabbah-mkt.github.io/arena/">
+<title>أداة Arena: خلّي 100 نسخة من Claude يتحاربوا | sabbah.mkt</title>
+<meta name="description" content="أداة مجانية لـ Claude Code بتعطي نفس المهمة لنسخ كثيرة من Claude، بيهاجموا حلول بعض وبيصلّحوا، والحَكَم بيختار الأقوى. طريقة التنزيل والاستعمال والكلفة.">
+<meta property="og:title" content="أداة Arena: خلّي 100 نسخة من Claude يتحاربوا">
+<meta property="og:image" content="/assets/arena-card.jpg">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="logo" href="/">sabbah<b></b><i>mkt</i></a>
+<nav><a href="/#services">الخدمات</a><a href="/free/">ملفات مجانية</a><a href="/consult/">استشارة</a><a href="/#contact">التواصل</a></nav></header>
+
+<section class="hero">
+<span class="tag">FREE TOOL 06</span>
+<h1>خلّي <mark>100 نسخة</mark> من <bdi dir="ltr">Claude</bdi> يتحاربوا… والأقوى بيضل</h1>
+<p class="lead"><bdi dir="ltr">Arena</bdi> أداة مجانية (<bdi dir="ltr">skill</bdi>) لـ <bdi dir="ltr">Claude Code</bdi>. بتعطي نفس المهمة لنسخ كثيرة من <bdi dir="ltr">Claude</bdi>، كل نسخة بتفكر بطريقة مختلفة. بعدين بيهاجموا حلول بعض، وبيدافعوا وبيصلّحوا، وحَكَم بيعطي علامة، والخسران بيطلع، لحتى يضل حل واحد.</p>
+<a class="btn hi" href="https://github.com/Jakeschincariol/arena-skill" target="_blank" rel="noopener">صفحة الأداة على GitHub</a><a class="btn alt" href="#install">طريقة التنزيل</a>
+</section>
+
+<h2>كيف بتشتغل</h2>
+<div class="grid">
+<div class="card"><h3>1. نفس المهمة لكل النسخ</h3><p>كل نسخة بتاخد «كرت» مختلف: طريقة تفكير، وطريقة شغل، واستراتيجية. في 2,160 كرت مختلف.</p></div>
+<div class="card"><h3>2. هجوم ودفاع</h3><p>بيتقسموا أزواج. كل واحد بيهاجم حل التاني (لحد 7 ملاحظات: FATAL أو MAJOR أو MINOR)، وبعدين بيدافع عن حله وبيصلّحه.</p></div>
+<div class="card"><h3>3. الحَكَم</h3><p>حَكَم منفصل بيعطي علامة من 100: الصحة 30، الاكتمال 25، الصمود أمام الانتقادات 20، الدقة 15، الوضوح 10. الخسران بيطلع.</p></div>
+</div>
+<div class="note">الأداة ما بتعدّل ملفاتك. كل شغل النسخ بينكتب بمجلد اسمه <code class="i">.arena</code>، والحل الفائز بيرجعلك وانت بتقرر شو تعمل فيه.</div>
+
+<h2 id="install">طريقة التنزيل</h2>
+<ol class="steps">
+<li><b>بتحتاج <bdi dir="ltr">Claude Code</bdi> و <bdi dir="ltr">Python</bdi>.</b><br><a class="btn" href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank" rel="noopener">تنزيل Claude Code</a><a class="btn alt" href="https://www.python.org/downloads/" target="_blank" rel="noopener">تنزيل Python</a></li>
+<li><b>أسهل طريقة:</b> الصق هاد بـ <bdi dir="ltr">Claude Code</bdi>:
+<pre>https://github.com/Jakeschincariol/arena-skill
+
+Install this skill, then confirm /arena works.</pre></li>
+<li><b>أو بإيدك</b> من الـ <bdi dir="ltr">Terminal</bdi>:
+<pre>git clone https://github.com/Jakeschincariol/arena-skill.git
+cp -r arena-skill/skills/arena ~/.claude/skills/</pre></li>
+</ol>
+
+<h2>طريقة الاستعمال</h2>
+<p>لما يعطيك <bdi dir="ltr">Claude</bdi> جواب ما عجبك، اكتب:</p>
+<pre>/arena --quick</pre>
+<p>هيك بياخد آخر طلب إلك كمهمة، والجواب اللي ما عجبك كجواب لازم ينغلب. أو اكتب المهمة مباشرة:</p>
+<pre>/arena --quick اكتبلي هوك لريل عن ...</pre>
+
+<h2>⚠️ الكلفة</h2>
+<p>الأداة ببلاش، بس كل نسخة بتصرف من حدود استخدامك لـ <bdi dir="ltr">Claude</bdi>:</p>
+<div class="grid">
+<div class="card"><h3>100 نسخة (الافتراضي)</h3><p>7 جولات، 595 عملية. خليها للإشيات المهمة جداً.</p></div>
+<div class="card"><h3>16 نسخة: <bdi dir="ltr">--quick</bdi></h3><p>4 جولات، 91 عملية. هاي الأنسب للاستعمال اليومي.</p></div>
+</div>
+<div class="note"><b>نصيحة:</b> اكتب المهمة واضحة وفيها كل الشروط. النسخ ما بتشوف محادثتك، بتشوف بس ملف المهمة، فإذا شرط ما انكتب، كلهم رح يفوّتوه.</div>
+<p class="src">المعلومات من صفحة الأداة الرسمية على GitHub (رخصة MIT)، تم التحقق بتاريخ 22 تشرين الثاني 2026.</p>
+
+<div class="cta-box">
+<h3>بدك أدوات زي هاي؟</h3>
+<p>بنزّل كل فترة أداة مجانية مفيدة مع طريقة استعمالها. تابعني عإنستغرام لحتى يوصلك كل جديد.</p>
+<a class="btn" href="https://www.instagram.com/sabbah.mkt/">تابع <bdi dir="ltr">@sabbah.mkt</bdi></a><a class="btn alt" href="/free/">بقية الملفات</a>
+</div>
+
+<footer>© 2026 sabbah.mkt</footer>
+</div>
+</body>
+</html>
